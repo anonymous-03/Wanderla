@@ -1,0 +1,42 @@
+<%- layout('/layouts/boilerplate')-%>
+<body>
+    <div class="row col-md-8 offset-2">
+    <form method="post" action="/listings/<%=listing._id%>?_method=PATCH">
+        <br><br>
+        <h3>Edit New Listing</h3>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" value="<%=listing.title%>" id="title" name="listing[title]">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea id="description" class="form-control" name="listing[description]" placeholder="Express your thoughts on your villa" rows="3"><%=listing.description%></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input id="price" type="number" class="form-control" placeholder="Price" name="listing[price]" value=<%=listing.price%>>
+        </div>
+      
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input id="location" type="text" class="form-control" placeholder="Location" name="listing[location]" value=<%=listing.location%>>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input id="country" class="form-control" type="text" placeholder="country" name="listing[country]" value=<%=listing.country%>>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image url</label>
+            <input id="image" class="form-control" type="text" placeholder="url" name="listing[url]" value=<%=listing.image.url%>>
+        </div>
+        
+        <div class="new-btn">
+            <button class="btn btn-primary btn-md">Edit Listing</button>
+        </div>
+        <br><br>
+    </div>
+        
+        
+        
+    </form>
+</body>

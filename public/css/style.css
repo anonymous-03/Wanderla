@@ -1,0 +1,166 @@
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.container{
+    flex:1;
+}
+
+/* NAVBAR */
+.navbar{
+    height: 70px;
+    border-bottom: 1px solid rgb(46, 43, 43) !important;
+    background-color: white;
+    /* position: sticky !important;
+    top: 0 !important;
+    z-index: 1000; */
+    /* can also use this but currently using sticky-top class */
+}
+
+
+.nav-link{
+    color:rgb(10, 10, 10) !important;
+}
+
+.fa-compass{
+    color:#fe424d;
+    font-size: 1.9rem;
+}
+
+
+/* Footer */
+.f-info{
+    padding: 5px;
+    margin: 5px;
+}
+.f-info-socials{
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    gap: 10px;
+}
+.company-name{
+    text-align: center;
+    font-size: 1.1rem;
+}
+.f-info-links{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #333;
+}
+footer{
+    background-color: #ebebeb;
+    width: 100%;
+}
+
+
+/* Listings page */
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(300px,auto));
+    gap: 8px;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+@media screen and (max-width:1400px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(3,minmax(200px,auto));
+        gap: 8px;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(250px,auto));
+        gap: 5px;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: repeat(1,minmax(250px,auto));
+        gap: 5px;
+    justify-content: space-evenly;
+    }
+    .navbar-collapse{
+        background-color: white!important;
+        opacity: 0.7;
+    }
+}
+.card-img{
+    height: 70%;
+    border-radius: 5% !important;
+    
+}
+.card{
+    border: none !important;
+    height: 450px !important;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-delay: 0s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+}
+
+.card-img-overlay{
+    opacity: 0;
+}
+.card:hover{
+    transform: scale(1.01);
+    .card-img-overlay{
+        background-color: white;
+        opacity: 0.2;
+    }
+}
+
+
+/* ADD LISTING */
+
+.btn-primary{
+    background-color: #fe424d !important;
+    border: 1px solid white !important;
+    border-radius: 10px;
+}
+.new-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.new-form-wrapper{
+    width: 50vw;
+    margin: auto;
+}
+
+
+/* Show page */
+
+
+.card-show{
+    width: 50vw;
+    .show-img{
+        height: 25vw;
+        border-radius: 10px;
+    }
+}
+.show-btns{
+    display: flex;
+    gap:10px;
+}
+.show-wrapper{
+    width: 50vw;
+    margin: auto;
+}
+
